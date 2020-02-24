@@ -8,7 +8,7 @@ const EmployeeTable = () => {
             field: "name",
             sort: "asc",
             width: 150 
-            }
+            },
             {
             name: "Department",
             field: "department",
