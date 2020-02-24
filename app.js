@@ -1,23 +1,15 @@
-import React, {useState} from "react";
-import ClassComponent from "ClassComponent";
+//This file renders the table to the user
+import React from "react";
 
-function App () {
-    const [employeeState, setEmployeeState] = useState({
-        name: "",
-        newHire: ""
-    });
-
-    return (
-        <div className="card">
-        <div>
-          Name: {employeeState.name}
-        </div>
-        <div>
-          New Hire Status: {employeeState.newHire}
-        </div>
-       
-      </div>
-    );
+function Table(props) {
+  return (
+    <ul className="list-group">
+      {props.employees.map(item =>(
+        <li className ="list-group-item" key={item.id}>
+        {item.name}
+        </li>
+      ))}
+    </ul>
+  );
 }
-
-export default App;
+export default Table;
